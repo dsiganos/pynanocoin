@@ -676,7 +676,7 @@ class TestComms(unittest.TestCase):
         frontserv = frontier_service(livectx, inter, 0)
         thread1 = threading.Thread(target=frontserv.start_service, daemon=True)
         thread1.start()
-        time.sleep(3)
+        time.sleep(5)
         s_packet = get_all_frontiers_packet_from_service()
         self.assertTrue(len(s_packet.frontiers) > 0)
 
